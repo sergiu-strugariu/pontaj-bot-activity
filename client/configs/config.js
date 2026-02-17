@@ -1,5 +1,5 @@
 export const authorizedUsers = {
-    "3780364189848042353": { // Eu
+    "378036418984804353": { // Eu
         role: "director",
         name: "Director",
         servers: {
@@ -21,7 +21,7 @@ export const authorizedUsers = {
             User: true
         }
     },
-    "378036418984804353": { // Eu
+    "309367153063231488": { // SkyPixel
         role: "adjunct-sef",
         name: "Adjunct Șef",
         servers: {
