@@ -1,5 +1,5 @@
 export const authorizedUsers = {
-    "513027762953519106": { // Eu
+    "378036418984804353": { // Eu
         role: "director",
         name: "Director",
         servers: {
@@ -21,7 +21,7 @@ export const authorizedUsers = {
             User: true
         }
     },
-    "378036418984804353": { // Parker
+    "513027762953519106": { // Parker
         role: "colaborator",
         name: "Colaborator",
         servers: {
