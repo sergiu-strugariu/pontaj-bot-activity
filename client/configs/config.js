@@ -1,7 +1,29 @@
 export const authorizedUsers = {
-    "378036418984804353": { // Eu
+    "3780364189848042353": { // Eu
         role: "director",
         name: "Director",
+        servers: {
+            "1197908906542903337": true,
+            "1468716505829998646": true,
+            "1460783529641251012": true
+        },
+        permissions: {
+            CVSubmission: true,
+            Demisie: true,
+            GuildConfig: true,
+            Permission: true,
+            Points: true,
+            PointsHistory: true,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
+            TimeEntry: true,
+            User: true
+        }
+    },
+    "378036418984804353": { // Eu
+        role: "adjunct-sef",
+        name: "Adjunct Șef",
         servers: {
             "1197908906542903337": true,
             "1468716505829998646": true,
