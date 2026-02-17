@@ -1,0 +1,1248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #0a2a44;
+    --primary-dark: #051a2b;
+    --primary-light: #1e3a5f;
+    --accent: #b22234;
+    --accent-light: #c13c3c;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-tertiary: #64748b;
+    --text-light: #94a3b8;
+    --bg-main: #f0f4f8;
+    --bg-card: #ffffff;
+    --bg-sidebar: #ffffff;
+    --border: #e2e8f0;
+    --border-light: #eef2f6;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --success: #0b5e42;
+    --success-light: #e6f7e6;
+    --warning: #b45309;
+    --warning-light: #fff3e0;
+    --error: #b22234;
+    --error-light: #fee9e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-main);
+    color: var(--text-primary);
+}
+
+/* Wrapper principal */
+.dashboard-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-main);
+}
+
+.dashboard-frame {
+    width: 100%;
+    height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-light);
+    background: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.institution-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.institution-info h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.3px;
+    margin-bottom: 0.2rem;
+}
+
+.institution-info h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-tertiary);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.security-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: #f1f5f9;
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.security-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.4rem 1rem;
+    background: #f8fafc;
+    border-radius: 40px;
+    border: 1px solid var(--border);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.user-role {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Layout principal */
+.dashboard-layout {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    background: var(--bg-main);
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-header {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    background: #fafbfc;
+}
+
+.sidebar-header h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.server-count {
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+.server-count span {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.guild-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.guild-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    margin: 0.2rem 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.guild-item:hover {
+    background: #f1f5f9;
+}
+
+.guild-item.selected {
+    background: var(--primary);
+}
+
+.guild-item.selected .guild-name,
+.guild-item.selected .guild-id {
+    color: white;
+}
+
+.guild-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.guild-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.guild-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.guild-id {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    font-family: 'Courier New', monospace;
+}
+
+.sidebar-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-light);
+    background: #fafbfc;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+/* Main content */
+.dashboard-content {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Welcome card */
+.welcome-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+    background: linear-gradient(135deg, #fafbfc 0%, #f5f7fa 100%);
+    border-radius: 24px;
+    padding: 3rem;
+}
+
+.welcome-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.welcome-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.welcome-card p {
+    color: var(--text-tertiary);
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* Guild data header */
+.guild-data-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.guild-info-compact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.guild-icon-large {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.guild-meta h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.guild-meta span {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-family: 'Courier New', monospace;
+}
+
+.data-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.table-count-badge {
+    padding: 0.4rem 1rem;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+/* Table cards */
+.table-card {
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    background: #fafbfc;
+    border-bottom: 1px solid var(--border);
+}
+
+.table-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.table-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.table-title h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.table-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.record-count {
+    padding: 0.3rem 1rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.column-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+/* Table container */
+.table-wrapper {
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 1rem;
+    background: #f8fafc;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.data-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+.data-table td .null-value {
+    color: var(--text-tertiary);
+    font-style: italic;
+    background: #f1f5f9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Loading states */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-state p {
+    color: var(--text-tertiary);
+}
+
+/* Error state */
+.error-state {
+    text-align: center;
+    padding: 3rem;
+    background: var(--error-light);
+    border-radius: 20px;
+    border: 1px solid var(--error);
+}
+
+.error-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.error-state h4 {
+    color: var(--error);
+    margin-bottom: 0.5rem;
+}
+
+.error-state p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.error-details {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--error);
+}
+
+/* Footer */
+.dashboard-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--border-light);
+    background: white;
+}
+
+.logout-button {
+    padding: 0.6rem 2rem;
+    background: white;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.logout-button:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.footer-timestamp {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+}
+
+/* Scrollbar personalizat */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-light);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        flex: 0 0 auto;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .guild-data-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+/* Stiluri pentru collapse/expand */
+.table-header {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.table-header:hover {
+    background-color: #f0f4fa;
+}
+
+.collapse-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-left: 1rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.table-header:hover .collapse-icon {
+    background-color: var(--primary);
+    color: white;
+}
+
+.table-wrapper {
+    transition: all 0.3s ease-in-out;
+}
+
+.table-info-footer {
+    padding: 1rem;
+    text-align: center;
+    background: #f8fafc;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    border-radius: 0 0 16px 16px;
+}
+
+/* Îmbunătățiri pentru tabele mari */
+.table-wrapper {
+    max-height: 600px;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-light) #f1f5f9;
+}
+
+.table-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+.data-table {
+    min-width: 100%;
+}
+
+.data-table th {
+    position: sticky;
+    top: 0;
+    background: var(--primary);
+    color: white;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Animație pentru expand/collapse */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-wrapper {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Statistici în header */
+.data-meta .timestamp {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: var(--primary-light);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+}
+
+/* Loading îmbunătățit */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-right-color: var(--primary-light);
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Badge pentru numărul de înregistrări */
+.record-count {
+    background: var(--primary);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.column-count {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .table-stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Stiluri pentru collapse/expand */
+.table-header {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.table-header:hover {
+    background-color: #f0f4fa;
+}
+
+.collapse-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-left: 1rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.table-header:hover .collapse-icon {
+    background-color: var(--primary);
+    color: white;
+}
+
+.table-wrapper {
+    transition: all 0.3s ease-in-out;
+}
+
+.table-info-footer {
+    padding: 1rem;
+    text-align: center;
+    background: #f8fafc;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    border-radius: 0 0 16px 16px;
+}
+
+/* Îmbunătățiri pentru tabele mari */
+.table-wrapper {
+    max-height: 600px;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-light) #f1f5f9;
+}
+
+.table-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+.data-table {
+    min-width: 100%;
+}
+
+.data-table th {
+    position: sticky;
+    top: 0;
+    background: var(--primary);
+    color: white;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Animație pentru expand/collapse */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-wrapper {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Statistici în header */
+.data-meta .timestamp {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: var(--primary-light);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+}
+
+/* Loading îmbunătățit */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-right-color: var(--primary-light);
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Badge pentru numărul de înregistrări */
+.record-count {
+    background: var(--primary);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.column-count {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .table-stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Stiluri pentru numele serverelor */
+.guild-name.default-name {
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.guild-db-indicator {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-left: 0.5rem;
+    cursor: help;
+}
+
+.guild-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    margin: 0.2rem 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.guild-item:hover .guild-db-indicator {
+    opacity: 1;
+}
+
+.guild-item.selected .guild-db-indicator {
+    color: white;
+    opacity: 1;
+}
+
+/* Tooltip pentru indicator */
+.guild-db-indicator[title] {
+    position: relative;
+}
+
+.guild-db-indicator[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    z-index: 100;
+    margin-bottom: 0.3rem;
+    pointer-events: none;
+}
+
+/* Îmbunătățire pentru afișarea numelor lungi */
+.guild-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.guild-item.selected .guild-name {
+    color: white;
+}
+
+.guild-item.selected .guild-name.default-name {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Stiluri pentru permisiuni */
+.table-count-badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.data-meta .timestamp {
+    background: var(--primary-light);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+}
+
+/* Indicator pentru tabelele accesibile */
+.table-card {
+    border-left: 3px solid var(--primary);
+}
+
+/* Mesaj pentru permisiuni insuficiente */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px dashed var(--border);
+}
+
+/* Card pentru utilizatori activi */
+.active-users-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 8px 20px rgba(0, 20, 40, 0.06);
+    border-left: 4px solid #22c55e;
+}
+
+.active-users-card.empty {
+    border-left-color: var(--text-light);
+}
+
+.active-users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.active-user-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.active-user-item:hover {
+    background: #f1f5f9;
+    transform: translateX(4px);
+}
+
+.active-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.active-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.active-user-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+}
+
+.active-user-details {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    flex-wrap: wrap;
+}
+
+.active-user-id {
+    font-family: 'Courier New', monospace;
+    background: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.active-user-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: #16a34a;
+    font-weight: 500;
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--text-tertiary);
+    padding: 2rem;
+    font-style: italic;
+}

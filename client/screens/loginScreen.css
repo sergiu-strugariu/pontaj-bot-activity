@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #0b2b4f;
+    --primary-light: #1e3a6f;
+    --accent: #b22234;
+    --text-dark: #1e2a3a;
+    --text-regular: #2c3e50;
+    --text-muted: #546e7a;
+    --text-light: #78909c;
+    --bg-page: #f5f7fa;
+    --bg-card: #ffffff;
+    --border-light: #e9edf2;
+    --border-focus: #cbd5e0;
+    --success: #0b5e42;
+    --info: #1e4a6b;
+    --shadow-sm: 0 4px 12px rgba(0, 20, 40, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-page);
+    color: var(--text-regular);
+}
+
+.login-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-page);
+}
+
+.login-frame {
+    background: var(--bg-card);
+    width: 100%;
+    height: 100vh;
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Header */
+.login-header {
+    text-align: center;
+    flex-shrink: 0;
+    padding: 2.5vh 5vw 1.5vh 5vw;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.institution-logo {
+    width: clamp(56px, 7vh, 72px);
+    height: clamp(56px, 7vh, 72px);
+    margin: 0 auto 1.2vh;
+    border-radius: 6px;
+    object-fit: contain;
+    background: white;
+    padding: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.login-header h1 {
+    font-size: clamp(15px, 2.2vh, 18px);
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0 0 0.2rem 0;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.login-header h2 {
+    font-size: clamp(12px, 1.8vh, 14px);
+    font-weight: 400;
+    color: var(--text-muted);
+    margin: 0;
+    letter-spacing: 0.2px;
+}
+
+.security-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    border: 1px solid var(--border-focus);
+    border-radius: 30px;
+    padding: 0.3rem 1rem;
+    margin-top: 1.5vh;
+    font-size: clamp(9px, 1.2vh, 11px);
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Security badges row */
+.security-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2vh 5vw 1.5vh;
+    flex-wrap: wrap;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: clamp(10px, 1.3vh, 12px);
+    color: var(--text-regular);
+    background: #f8fafc;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--border-light);
+    white-space: nowrap;
+}
+
+.badge-item::before {
+    content: "●";
+    font-size: 10px;
+    color: var(--primary);
+    margin-right: 4px;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 0 5vw;
+}
+
+.user-info-card {
+    background: #f8fafd;
+    border-radius: 16px;
+    padding: clamp(16px, 2.5vh, 24px) clamp(20px, 3vw, 32px);
+    border: 1px solid var(--border-light);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.info-row {
+    margin-bottom: 1.8vh;
+}
+
+.info-label {
+    font-size: clamp(10px, 1.2vh, 11px);
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 0.3rem;
+}
+
+.info-value {
+    font-size: clamp(14px, 2vh, 16px);
+    font-weight: 500;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.role-badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+    font-size: clamp(10px, 1.3vh, 12px);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.id-container {
+    background: white;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Courier New', monospace;
+    margin-top: 0.5rem;
+}
+
+.id-label {
+    font-size: clamp(10px, 1.2vh, 11px);
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.id-value {
+    font-size: clamp(13px, 1.6vh, 14px);
+    font-weight: 600;
+    color: var(--primary);
+    background: #f1f5f9;
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+}
+
+/* Footer */
+.login-footer {
+    flex-shrink: 0;
+    padding: 1.8vh 5vw 2.5vh 5vw;
+    border-top: 1px solid var(--border-light);
+}
+
+.timestamp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2vh;
+    font-size: clamp(11px, 1.4vh, 12px);
+    color: var(--text-light);
+}
+
+.timestamp span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.timestamp span::before {
+    content: "•";
+    color: var(--primary);
+    font-size: 16px;
+    line-height: 1;
+}
+
+.timestamp span:first-child::before {
+    content: "";
+    display: none;
+}
+
+.login-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 2vh auto 1.5vh;
+    padding: 1.2rem 2rem;
+    border-radius: 40px;
+    font-size: clamp(13px, 1.6vh, 14px);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+    text-transform: uppercase;
+}
+
+.login-button:hover {
+    background: var(--primary-light);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.official-warning {
+    background: #fafbfd;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    padding: 1rem 1.2rem;
+    margin: 2vh 0 1.5vh;
+}
+
+.warning-title {
+    font-size: clamp(10px, 1.3vh, 11px);
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+}
+
+.warning-text {
+    font-size: clamp(11px, 1.4vh, 12px);
+    color: var(--text-regular);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.security-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem 2rem;
+    font-size: clamp(10px, 1.2vh, 11px);
+    color: var(--text-light);
+}
+
+.strip-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.strip-item::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: 600;
+    margin-right: 2px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .login-header {
+        padding: 2vh 4vw 1vh 4vw;
+    }
+
+    .security-badges {
+        gap: 0.8rem;
+    }
+
+    .badge-item {
+        padding: 0.2rem 0.8rem;
+    }
+
+    .timestamp {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .timestamp span::before {
+        display: none;
+    }
+}
+
+@media (max-height: 650px) {
+    .login-header {
+        padding: 1.5vh 4vw 1vh 4vw;
+    }
+
+    .institution-logo {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0.8vh;
+    }
+
+    .login-header h1 {
+        font-size: 15px;
+    }
+
+    .login-header h2 {
+        font-size: 12px;
+    }
+
+    .security-tag {
+        margin-top: 1vh;
+        padding: 0.2rem 0.8rem;
+    }
+
+    .security-badges {
+        margin: 1.5vh 4vw 1vh;
+    }
+
+    .user-info-card {
+        padding: 14px 18px;
+    }
+
+    .info-row {
+        margin-bottom: 1.2vh;
+    }
+
+    .login-footer {
+        padding: 1vh 4vw 1.5vh 4vw;
+    }
+
+    .official-warning {
+        padding: 0.6rem 1rem;
+        margin: 1vh 0;
+    }
+}
+
+@media (max-height: 500px) {
+    .login-header {
+        padding: 1vh 4vw 0.5vh 4vw;
+    }
+
+    .institution-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .login-header h1 {
+        font-size: 13px;
+    }
+
+    .login-header h2 {
+        font-size: 11px;
+    }
+
+    .security-tag {
+        display: none;
+    }
+
+    .security-badges {
+        display: none;
+    }
+
+    .user-info-card {
+        padding: 10px 12px;
+    }
+
+    .info-label {
+        font-size: 9px;
+    }
+
+    .info-value {
+        font-size: 12px;
+    }
+
+    .role-badge {
+        font-size: 9px;
+        padding: 0.1rem 0.6rem;
+    }
+
+    .id-container {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .id-value {
+        font-size: 11px;
+    }
+
+    .official-warning {
+        display: none;
+    }
+
+    .security-strip {
+        gap: 0.8rem;
+    }
+}
