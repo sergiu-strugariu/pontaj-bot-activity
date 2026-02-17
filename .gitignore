@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 
 # Sensitive environment variables
-#.env
+.env
 
 # Modules + built files
 node_modules
