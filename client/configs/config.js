@@ -1,27 +1,27 @@
 export const authorizedUsers = {
-    "378036418984804353": { // Eu
+    "513027762953519106": { // Eu
         role: "director",
         name: "Director",
         servers: {
             "1197908906542903337": true,
-            "1468716505829998646": false,
-            "1460783529641251012": false
+            "1468716505829998646": true,
+            "1460783529641251012": true
         },
         permissions: {
             CVSubmission: true,
-            Demisie: false,
-            GuildConfig: false,
-            Permission: false,
-            Points: false,
-            PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
+            Demisie: true,
+            GuildConfig: true,
+            Permission: true,
+            Points: true,
+            PointsHistory: true,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
             TimeEntry: true,
-            User: false
+            User: true
         }
     },
-    "513027762953519106": { // Parker
+    "378036418984804353": { // Parker
         role: "colaborator",
         name: "Colaborator",
         servers: {
