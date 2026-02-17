@@ -64,7 +64,7 @@ app.post("/api/token", async (req, res) => {
 
 // Endpoint simplu pentru guilds (doar ID-uri)
 app.get('/api/guilds', (req, res) => {
-  const guildDbPath = process.env.GUILD_DB_PATH || 'A:/Github/pontaj-bot/guild_databases';
+  const guildDbPath = process.env.GUILD_DB_PATH
 
   console.log('Cale guild DB:', guildDbPath);
 
@@ -92,7 +92,7 @@ app.get('/api/guilds', (req, res) => {
 // Endpoint pentru guilds cu detalii
 app.get('/api/guilds/details', async (req, res) => {
   try {
-    const guildDbPath = process.env.GUILD_DB_PATH || 'A:/Github/pontaj-bot/guild_databases';
+    const guildDbPath = process.env.GUILD_DB_PATH
 
     console.log('Încerc să citesc din:', guildDbPath);
 
@@ -136,7 +136,7 @@ app.get('/api/guilds/details', async (req, res) => {
 app.get('/api/guilds/:guildId/data', async (req, res) => {
   try {
     const { guildId } = req.params;
-    const guildDbPath = process.env.GUILD_DB_PATH || 'A:/Github/pontaj-bot/guild_databases';
+    const guildDbPath = process.env.GUILD_DB_PATH
     const dbPath = path.join(guildDbPath, `guild_${guildId}.sqlite`);
 
     console.log('Încerc să citesc baza de date:', dbPath);
@@ -193,7 +193,7 @@ app.get('/api/guilds/:guildId/data', async (req, res) => {
 // Endpoint pentru a obține numele serverelor din baza de date
 app.get('/api/guilds/with-names', async (req, res) => {
   try {
-    const guildDbPath = process.env.GUILD_DB_PATH || 'A:/Github/pontaj-bot/guild_databases';
+    const guildDbPath = process.env.GUILD_DB_PATH
 
     if (!fs.existsSync(guildDbPath)) {
       console.error('Directorul nu există:', guildDbPath);
@@ -299,7 +299,7 @@ app.get('/api/guilds/with-names', async (req, res) => {
 app.get('/api/guilds/:guildId/data/:userId', async (req, res) => {
   try {
     const { guildId, userId } = req.params;
-    const guildDbPath = process.env.GUILD_DB_PATH || 'A:/Github/pontaj-bot/guild_databases';
+    const guildDbPath = process.env.GUILD_DB_PATH
     const dbPath = path.join(guildDbPath, `guild_${guildId}.sqlite`);
 
     console.log('Încerc să citesc baza de date:', dbPath);
@@ -363,7 +363,7 @@ app.get('/api/guilds/:guildId/data/:userId', async (req, res) => {
 app.get('/api/guilds/:guildId/active-users', async (req, res) => {
   try {
     const { guildId } = req.params;
-    const guildDbPath = process.env.GUILD_DB_PATH || 'A:/Github/pontaj-bot/guild_databases';
+    const guildDbPath = process.env.GUILD_DB_PATH
     const dbPath = path.join(guildDbPath, `guild_${guildId}.sqlite`);
 
     console.log(`📊 Încerc să citesc utilizatorii activi pentru guild: ${guildId}`);
