@@ -5,7 +5,8 @@ export const authorizedUsers = {
         servers: {
             "1197908906542903337": true,
             "1468716505829998646": true,
-            "1460783529641251012": true
+            "1460783529641251012": true,
+            "1308522321459544065": true, // Bahamas
         },
         permissions: {
             CVSubmission: true,
@@ -49,7 +50,8 @@ export const authorizedUsers = {
         servers: {
             "1197908906542903337": true,
             "1468716505829998646": true,
-            "1460783529641251012": true
+            "1460783529641251012": true,
+            "1308522321459544065": true, // Bahamas
         },
         permissions: {
             CVSubmission: true,
@@ -71,7 +73,8 @@ export const authorizedUsers = {
         servers: {
             "1197908906542903337": true,
             "1468716505829998646": true,
-            "1460783529641251012": true
+            "1460783529641251012": true,
+            "1308522321459544065": true, // Bahamas
         },
         permissions: {
             CVSubmission: true,
