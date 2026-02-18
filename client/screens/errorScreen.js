@@ -31,7 +31,7 @@ export function showErrorScreen(error, currentUser = null) {
                 <!-- Header -->
                 <div class="error-header">
                     <img src="${rocketLogo}" class="institution-logo" alt="Stema Instituției" />
-                    <h1>MINISTERUL AFACERILOR INTERNE</h1>
+                    <h1>Inspecța Muncii</h1>
                     <h2>Inspectoratul Teritorial de Muncă</h2>
                     <div class="error-tag">Eroare de sistem</div>
                 </div>

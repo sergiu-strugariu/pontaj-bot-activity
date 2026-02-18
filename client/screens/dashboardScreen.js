@@ -34,7 +34,7 @@ export function showDashboardScreen(userData, currentUser, discordUsername) {
                     <div class="header-left">
                         <img src="${rocketLogo}" class="institution-logo" alt="Logo" />
                         <div class="institution-info">
-                            <h1>Ministerul Afacerilor Interne</h1>
+                            <h1>Inspecța Muncii</h1>
                             <h2>Inspectoratul Teritorial de Muncă</h2>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ export function showDashboardScreen(userData, currentUser, discordUsername) {
                     <!-- Sidebar -->
                     <div class="dashboard-sidebar">
                         <div class="sidebar-header">
-                            <h3>Servere disponibile</h3>
+                            <h3>Firme disponibile</h3>
                             <div class="server-count" id="server-count">
                                 Se încarcă...
                             </div>
@@ -66,7 +66,7 @@ export function showDashboardScreen(userData, currentUser, discordUsername) {
                         <div class="guild-list" id="guild-list">
                             <div class="loading-state" style="min-height: 200px;">
                                 <div class="loading-spinner"></div>
-                                <p>Se încarcă serverele...</p>
+                                <p>Se încarcă firmele...</p>
                             </div>
                         </div>
                         <div class="sidebar-footer">
@@ -85,8 +85,8 @@ export function showDashboardScreen(userData, currentUser, discordUsername) {
                     <div class="dashboard-content" id="dashboard-content">
                         <div class="welcome-card">
                             <div class="welcome-icon">📁</div>
-                            <h3>Selectează un server</h3>
-                            <p>Alege un server din sidebar pentru a vizualiza datele din baza de date</p>
+                            <h3>Selectează o firmă</h3>
+                            <p>Alege o firmă din sidebar pentru a vizualiza datele din baza de date</p>
                         </div>
                     </div>
                 </div>
@@ -127,11 +127,11 @@ async function fetchGuildsDetails() {
 
         if (guilds.length === 0) {
             guildListContainer.innerHTML = '<div class="no-guilds">Nu ai acces la niciun server</div>';
-            serverCount.textContent = '0 servere';
+            serverCount.textContent = '0 firme';
             return;
         }
 
-        serverCount.innerHTML = `<span>${guilds.length}</span> servere disponibile`;
+        serverCount.innerHTML = `<span>${guilds.length}</span> firme disponibile`;
 
         const guildList = document.createElement('div');
         guildList.className = 'guild-list-items';
@@ -385,7 +385,7 @@ async function displayGuildData(data, guildId, guildName) {
                 <div class="guild-info-compact">
                     <div class="guild-icon-large">${guildName ? guildName.charAt(0).toUpperCase() : guildId.charAt(0)}</div>
                     <div class="guild-meta">
-                        <h4>${guildName || `Server ${guildId}`}</h4>
+                        <h4>${guildName || `Firma ${guildId}`}</h4>
                         <span>ID: ${guildId} • ${new Date().toLocaleString('ro-RO')}</span>
                     </div>
                 </div>
@@ -503,7 +503,7 @@ async function displayGuildData(data, guildId, guildName) {
             <div class="guild-info-compact">
                 <div class="guild-icon-large">${guildName ? guildName.charAt(0).toUpperCase() : guildId.charAt(0)}</div>
                 <div class="guild-meta">
-                    <h4>${guildName || `Server ${guildId}`}</h4>
+                    <h4>${guildName || `Firma ${guildId}`}</h4>
                     <span>ID: ${guildId} • Actualizat: ${new Date().toLocaleString('ro-RO')}</span>
                 </div>
             </div>

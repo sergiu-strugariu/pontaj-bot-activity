@@ -225,7 +225,7 @@ app.get('/api/guilds/with-names', async (req, res) => {
         if (!fs.existsSync(dbPath)) {
           guildsWithNames.push({
             id: guildId,
-            name: `Server ${guildId}`,
+            name: `Firma ${guildId}`,
             hasName: false
           });
           continue;
@@ -240,7 +240,7 @@ app.get('/api/guilds/with-names', async (req, res) => {
           WHERE type='table' AND name='GuildConfigs'
         `).get();
 
-        let serverName = `Server ${guildId}`;
+        let serverName = `Firma ${guildId}`;
 
         if (tableCheck) {
           // Încercăm să citim numele din GuildConfig
@@ -258,7 +258,7 @@ app.get('/api/guilds/with-names', async (req, res) => {
             }
 
             // Dacă nu găsim niciun câmp specific, încercăm să găsim orice câmp care conține 'name'
-            if (serverName === `Server ${guildId}`) {
+            if (serverName === `Firma ${guildId}`) {
               for (const key of Object.keys(config)) {
                 if (key.toLowerCase().includes('name') && config[key]) {
                   serverName = config[key];

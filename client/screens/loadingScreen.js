@@ -23,7 +23,7 @@ export function showLoadingScreen() {
             <div class="loading-frame">
                 <div class="loading-header">
                     <img src="${rocketLogo}" class="institution-logo" alt="Instituție" />
-                    <h1>Ministerul Afacerilor Interne</h1>
+                    <h1>Inspecța Muncii</h1>
                     <h2>Inspectoratul Teritorial de Muncă</h2>
                     <div class="security-badge">Confidențial</div> 
                 </div> 

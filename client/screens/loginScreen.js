@@ -21,7 +21,7 @@ export function showLoginScreen(userData, currentUser, discordUsername, onAccess
                 <!-- Header -->
                 <div class="login-header">
                     <img src="${rocketLogo}" class="institution-logo" alt="Stema Instituției" />
-                    <h1>MINISTERUL AFACERILOR INTERNE</h1>
+                    <h1>Inspecța Muncii</h1>
                     <h2>Inspectoratul Teritorial de Muncă</h2>
                     <div class="security-tag">Sistem informatic securizat • Nivel clasificat</div>
                 </div>
@@ -71,7 +71,7 @@ export function showLoginScreen(userData, currentUser, discordUsername, onAccess
                     <div class="official-warning">
                         <div class="warning-title">Avertisment</div>
                         <div class="warning-text">
-                            Accesul neautorizat este interzis prin lege. Toate acțiunile sunt monitorizate și înregistrate conform OUG 123/2023.
+                            Accesul neautorizat este interzis prin lege. Toate acțiunile sunt monitorizate și înregistrate conform OG 77/2026.
                         </div>
                     </div>
 
