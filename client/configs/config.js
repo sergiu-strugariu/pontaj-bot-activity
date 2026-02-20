@@ -6,15 +6,15 @@ export const authorizedUsers = {
             "1350922441580351488": true,
         },
         permissions: {
-            CVSubmission: true,
-            Demisie: false,
+            CVSubmission: false,
+            Demisie: true,
             GuildConfig: false,
             Permission: false,
             Points: false,
             PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
             TimeEntry: true,
             User: false
         }
