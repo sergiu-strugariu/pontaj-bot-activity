@@ -3,7 +3,7 @@ export const authorizedUsers = {
         role: "Asistent Director",
         name: "Asistent Director",
         servers: {
-            "1197908906542903337": true,
+            "1350922441580351488": true,
         },
         permissions: {
             CVSubmission: true,
@@ -116,11 +116,12 @@ export const authorizedUsers = {
         }
     },
 
+    // Velentzas
     "301783270280921088": { // Radu Stefan
         role: "Asistent Director",
         name: "Asistent Director",
         servers: {
-            "1197908906542903337": true,
+            "1350922441580351488": true,
         },
         permissions: {
             CVSubmission: true,
@@ -140,7 +141,7 @@ export const authorizedUsers = {
         role: "Asistent Director",
         name: "Asistent Director",
         servers: {
-            "1197908906542903337": true,
+            "1350922441580351488": true,
         },
         permissions: {
             CVSubmission: true,
@@ -160,7 +161,7 @@ export const authorizedUsers = {
         role: "Asistent Director",
         name: "Asistent Director",
         servers: {
-            "1197908906542903337": true,
+            "1350922441580351488": true,
         },
         permissions: {
             CVSubmission: true,
@@ -180,7 +181,7 @@ export const authorizedUsers = {
         role: "Asistent Director",
         name: "Director Afacere",
         servers: {
-            "1197908906542903337": true,
+            "1350922441580351488": true,
         },
         permissions: {
             CVSubmission: true,
