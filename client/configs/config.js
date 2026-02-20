@@ -1,22 +1,27 @@
 export const authorizedUsers = {
     "378036418984804353": { // Eu
-        role: "Asistent Director",
-        name: "Asistent Director",
+        role: "director",
+        name: "Director",
         servers: {
-            "1350922441580351488": true,
+            "1197908906542903337": true,
+            "1468716505829998646": true,
+            "1460783529641251012": true,
+            "1308522321459544065": true, // Bahamas
+            "1458865556420690229": true, // Frizerie 7/7 (OLD)
+            "1350922441580351488": true // Velentzas (Service 8/13) Paleto
         },
         permissions: {
-            CVSubmission: false,
+            CVSubmission: true,
             Demisie: true,
-            GuildConfig: false,
-            Permission: false,
-            Points: false,
-            PointsHistory: false,
+            GuildConfig: true,
+            Permission: true,
+            Points: true,
+            PointsHistory: true,
             Presence: true,
             SalaryAdjustment: true,
             SalaryConfig: true,
             TimeEntry: true,
-            User: false
+            User: true
         }
     },
     "309367153063231488": { // SkyPixel
@@ -125,14 +130,14 @@ export const authorizedUsers = {
         },
         permissions: {
             CVSubmission: true,
-            Demisie: false,
+            Demisie: true,
             GuildConfig: false,
             Permission: false,
             Points: false,
             PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
             TimeEntry: true,
             User: false
         }
@@ -145,14 +150,14 @@ export const authorizedUsers = {
         },
         permissions: {
             CVSubmission: true,
-            Demisie: false,
+            Demisie: true,
             GuildConfig: false,
             Permission: false,
             Points: false,
             PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
             TimeEntry: true,
             User: false
         }
@@ -165,14 +170,14 @@ export const authorizedUsers = {
         },
         permissions: {
             CVSubmission: true,
-            Demisie: false,
+            Demisie: true,
             GuildConfig: false,
             Permission: false,
             Points: false,
             PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
             TimeEntry: true,
             User: false
         }
@@ -185,14 +190,14 @@ export const authorizedUsers = {
         },
         permissions: {
             CVSubmission: true,
-            Demisie: false,
+            Demisie: true,
             GuildConfig: false,
             Permission: false,
             Points: false,
             PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
             TimeEntry: true,
             User: false
         }
