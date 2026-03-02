@@ -3,12 +3,11 @@ export const authorizedUsers = {
         role: "director",
         name: "Director",
         servers: {
-            "1197908906542903337": true,
-            "1468716505829998646": true,
-            "1460783529641251012": true,
-            "1308522321459544065": true, // Bahamas
-            "1458865556420690229": true, // Frizerie 7/7 (OLD)
-            "1350922441580351488": true // Velentzas (Service 8/13) Paleto
+            "1197908906542903337": true, // S.C Service Del Sur S.R.L
+            "1468716505829998646": true, // Midnight Custom SRL
+            "1460783529641251012": true, // S.C Urban Barber S.R.L
+            "1423592908396691458": true, // Resort Royale
+            "1350922441580351488": true // Velentzas S.R.L
         },
         permissions: {
             CVSubmission: true,
@@ -28,12 +27,11 @@ export const authorizedUsers = {
         role: "adjunct-sef",
         name: "Adjunct Șef",
         servers: {
-            "1197908906542903337": true,
-            "1468716505829998646": true,
-            "1460783529641251012": true,
-            "1308522321459544065": true, // Bahamas
-            "1458865556420690229": true, // Frizerie 7/7 (OLD)
-            "1350922441580351488": true // Velentzas (Service 8/13) Paleto
+            "1197908906542903337": true, // S.C Service Del Sur S.R.L
+            "1468716505829998646": true, // Midnight Custom SRL
+            "1460783529641251012": true, // S.C Urban Barber S.R.L
+            "1423592908396691458": true, // Resort Royale
+            "1350922441580351488": true // Velentzas S.R.L
         },
         permissions: {
             CVSubmission: true,
@@ -53,12 +51,11 @@ export const authorizedUsers = {
         role: "colaborator",
         name: "Colaborator",
         servers: {
-            "1197908906542903337": true,
-            "1468716505829998646": true,
-            "1460783529641251012": true,
-            // "1308522321459544065": true, // Bahamas
-            // "1458865556420690229": true, // Frizerie 7/7 (OLD)
-            "1350922441580351488": true // Velentzas (Service 8/13) Paleto
+            "1197908906542903337": true, // S.C Service Del Sur S.R.L
+            "1468716505829998646": true, // Midnight Custom SRL
+            "1460783529641251012": true, // S.C Urban Barber S.R.L
+            // "1423592908396691458": true, // Resort Royale
+            "1350922441580351488": true // Velentzas S.R.L
         },
         permissions: {
             CVSubmission: true,
@@ -78,12 +75,11 @@ export const authorizedUsers = {
         role: "colaborator",
         name: "Colaborator",
         servers: {
-            "1197908906542903337": true,
-            "1468716505829998646": true,
-            "1460783529641251012": true,
-            // "1308522321459544065": true, // Bahamas
-            // "1458865556420690229": true, // Frizerie 7/7 (OLD)
-            "1350922441580351488": true // Velentzas (Service 8/13) Paleto
+            "1197908906542903337": true, // S.C Service Del Sur S.R.L
+            "1468716505829998646": true, // Midnight Custom SRL
+            "1460783529641251012": true, // S.C Urban Barber S.R.L
+            // "1423592908396691458": true, // Resort Royale
+            "1350922441580351488": true // Velentzas S.R.L
         },
         permissions: {
             CVSubmission: true,
@@ -103,12 +99,11 @@ export const authorizedUsers = {
         role: "colaborator",
         name: "Colaborator",
         servers: {
-            "1197908906542903337": true,
-            "1468716505829998646": true,
-            "1460783529641251012": true,
-            // "1308522321459544065": true, // Bahamas
-            // "1458865556420690229": true, // Frizerie 7/7 (OLD)
-            "1350922441580351488": true // Velentzas (Service 8/13) Paleto
+            "1197908906542903337": true, // S.C Service Del Sur S.R.L
+            "1468716505829998646": true, // Midnight Custom SRL
+            "1460783529641251012": true, // S.C Urban Barber S.R.L
+            "1423592908396691458": true, // Resort Royale
+            "1350922441580351488": true // Velentzas S.R.L
         },
         permissions: {
             CVSubmission: true,
