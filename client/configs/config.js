@@ -1,4 +1,6 @@
 export const authorizedUsers = {
+
+    // DEPARTAMENT ITM
     "378036418984804353": { // Eu
         role: "director",
         name: "Director",
@@ -47,6 +49,32 @@ export const authorizedUsers = {
             User: true
         }
     },
+    "282459677860691969": { // Angel
+        role: "adjunct-sef",
+        name: "Adjunct Șef",
+        servers: {
+            "1197908906542903337": true, // S.C Service Del Sur S.R.L
+            "1468716505829998646": true, // Midnight Custom SRL
+            "1460783529641251012": true, // S.C Urban Barber S.R.L
+            "1423592908396691458": true, // Resort Royale
+            "1350922441580351488": true // Velentzas S.R.L
+        },
+        permissions: {
+            CVSubmission: true,
+            Demisie: false,
+            GuildConfig: false,
+            Permission: false,
+            Points: false,
+            PointsHistory: false,
+            Presence: false,
+            SalaryAdjustment: false,
+            SalaryConfig: false,
+            TimeEntry: false,
+            User: false
+        }
+    },
+
+    // Restarurant Imperial
     "513027762953519106": { // Parker
         role: "colaborator",
         name: "Colaborator",
@@ -92,30 +120,6 @@ export const authorizedUsers = {
             SalaryAdjustment: false,
             SalaryConfig: false,
             TimeEntry: true,
-            User: false
-        }
-    },
-    "282459677860691969": { // Angel
-        role: "colaborator",
-        name: "Colaborator",
-        servers: {
-            "1197908906542903337": true, // S.C Service Del Sur S.R.L
-            "1468716505829998646": true, // Midnight Custom SRL
-            "1460783529641251012": true, // S.C Urban Barber S.R.L
-            "1423592908396691458": true, // Resort Royale
-            "1350922441580351488": true // Velentzas S.R.L
-        },
-        permissions: {
-            CVSubmission: true,
-            Demisie: false,
-            GuildConfig: false,
-            Permission: false,
-            Points: false,
-            PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
-            TimeEntry: false,
             User: false
         }
     },
