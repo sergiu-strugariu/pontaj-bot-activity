@@ -23,7 +23,7 @@ export function showLoginScreen(userData, currentUser, discordUsername, onAccess
                     <img src="${rocketLogo}" class="institution-logo" alt="Stema Instituției" />
                     <h1>Inspecța Muncii</h1>
                     <h2>Inspectoratul Teritorial de Muncă</h2>
-                    <div class="security-tag">Sistem informatic securizat • Nivel clasificat</div>
+                    <div class="security-tag">Sistem informatic securizat</div>
                 </div>
 
                 <!-- Security badges row -->

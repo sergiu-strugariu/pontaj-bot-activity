@@ -100,6 +100,7 @@ html, body {
 .security-tag {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background: #f1f5f9;
     border: 1px solid var(--border-focus);
     border-radius: 30px;
@@ -110,6 +111,7 @@ html, body {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 /* Security badges row */

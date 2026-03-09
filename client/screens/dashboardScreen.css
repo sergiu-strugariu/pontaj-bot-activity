@@ -54,6 +54,76 @@ html, body {
     background: var(--bg-main);
 }
 
+/* Stiluri pentru butonul de statistici avansate */
+.stats-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.stats-icon {
+    font-size: 1.1rem;
+}
+
+.stats-text {
+    font-weight: 600;
+}
+
+.stats-count {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.8rem;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Stil pentru employee info în tabele */
+.employee-info {
+    line-height: 1.4;
+}
+
+.employee-info small {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    display: block;
+}
+
+/* Stil pentru valori boolean */
+.boolean-value {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.boolean-value.true {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.boolean-value.false {
+    background: var(--error-light);
+    color: var(--error);
+}
+
 .dashboard-frame {
     width: 100%;
     height: 100vh;

@@ -9,20 +9,21 @@ export const authorizedUsers = {
             "1468716505829998646": true, // Midnight Custom SRL
             "1460783529641251012": true, // S.C Urban Barber S.R.L
             "1423592908396691458": true, // Resort Royale
-            "1350922441580351488": true // Velentzas S.R.L
+            "1350922441580351488": true, // Velentzas S.R.L
+            "1446339763127717888": true
         },
         permissions: {
             CVSubmission: true,
             Demisie: true,
-            GuildConfig: true,
+            GuildConfig: false,
             Permission: true,
-            Points: true,
-            PointsHistory: true,
-            Presence: true,
+            Points: false,
+            PointsHistory: false,
+            Presence: false,
             SalaryAdjustment: true,
             SalaryConfig: true,
             TimeEntry: true,
-            User: true
+            User: false
         }
     },
     "309367153063231488": { // SkyPixel
@@ -75,50 +76,72 @@ export const authorizedUsers = {
     },
 
     // Restarurant Imperial
-    "513027762953519106": { // Parker
-        role: "colaborator",
-        name: "Colaborator",
+    // "513027762953519106": { // Parker
+    //     role: "colaborator",
+    //     name: "Colaborator",
+    //     servers: {
+    //         "1197908906542903337": true, // S.C Service Del Sur S.R.L
+    //         "1468716505829998646": true, // Midnight Custom SRL
+    //         "1460783529641251012": true, // S.C Urban Barber S.R.L
+    //         // "1423592908396691458": true, // Resort Royale
+    //         "1350922441580351488": true // Velentzas S.R.L
+    //     },
+    //     permissions: {
+    //         CVSubmission: true,
+    //         Demisie: false,
+    //         GuildConfig: false,
+    //         Permission: false,
+    //         Points: false,
+    //         PointsHistory: false,
+    //         Presence: false,
+    //         SalaryAdjustment: false,
+    //         SalaryConfig: false,
+    //         TimeEntry: true,
+    //         User: false
+    //     }
+    // },
+    // "243647018352771072": { // VooDoo
+    //     role: "colaborator",
+    //     name: "Colaborator",
+    //     servers: {
+    //         "1197908906542903337": true, // S.C Service Del Sur S.R.L
+    //         "1468716505829998646": true, // Midnight Custom SRL
+    //         "1460783529641251012": true, // S.C Urban Barber S.R.L
+    //         // "1423592908396691458": true, // Resort Royale
+    //         "1350922441580351488": true // Velentzas S.R.L
+    //     },
+    //     permissions: {
+    //         CVSubmission: true,
+    //         Demisie: false,
+    //         GuildConfig: false,
+    //         Permission: false,
+    //         Points: false,
+    //         PointsHistory: false,
+    //         Presence: false,
+    //         SalaryAdjustment: false,
+    //         SalaryConfig: false,
+    //         TimeEntry: true,
+    //         User: false
+    //     }
+    // },
+
+    // Urban Barber SRL
+    "831244684529631293": { // Kermitos
+        role: "Asistent Director",
+        name: "Asistent Director",
         servers: {
-            "1197908906542903337": true, // S.C Service Del Sur S.R.L
-            "1468716505829998646": true, // Midnight Custom SRL
-            "1460783529641251012": true, // S.C Urban Barber S.R.L
-            // "1423592908396691458": true, // Resort Royale
-            "1350922441580351488": true // Velentzas S.R.L
+            "1460783529641251012": true,
         },
         permissions: {
             CVSubmission: true,
-            Demisie: false,
+            Demisie: true,
             GuildConfig: false,
-            Permission: false,
+            Permission: true,
             Points: false,
             PointsHistory: false,
             Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
-            TimeEntry: true,
-            User: false
-        }
-    },
-    "243647018352771072": { // VooDoo
-        role: "colaborator",
-        name: "Colaborator",
-        servers: {
-            "1197908906542903337": true, // S.C Service Del Sur S.R.L
-            "1468716505829998646": true, // Midnight Custom SRL
-            "1460783529641251012": true, // S.C Urban Barber S.R.L
-            // "1423592908396691458": true, // Resort Royale
-            "1350922441580351488": true // Velentzas S.R.L
-        },
-        permissions: {
-            CVSubmission: true,
-            Demisie: false,
-            GuildConfig: false,
-            Permission: false,
-            Points: false,
-            PointsHistory: false,
-            Presence: false,
-            SalaryAdjustment: false,
-            SalaryConfig: false,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
             TimeEntry: true,
             User: false
         }
@@ -146,26 +169,6 @@ export const authorizedUsers = {
         }
     },
     "575703586030223370": { // Mya
-        role: "Asistent Director",
-        name: "Asistent Director",
-        servers: {
-            "1350922441580351488": true,
-        },
-        permissions: {
-            CVSubmission: true,
-            Demisie: true,
-            GuildConfig: false,
-            Permission: false,
-            Points: false,
-            PointsHistory: false,
-            Presence: true,
-            SalaryAdjustment: true,
-            SalaryConfig: true,
-            TimeEntry: true,
-            User: false
-        }
-    },
-    "229164091451768832": { // Marin
         role: "Asistent Director",
         name: "Asistent Director",
         servers: {

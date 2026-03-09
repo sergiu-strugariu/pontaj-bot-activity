@@ -4,7 +4,7 @@ import {defineConfig} from 'vite';
 export default defineConfig({
   envDir: '../',
   server: {
-    allowedHosts: ['differential-discussion-epa-chris.trycloudflare.com'],
+    allowedHosts: ['restore-indicator-married-election.trycloudflare.com'],
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
