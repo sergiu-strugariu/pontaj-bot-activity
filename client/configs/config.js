@@ -208,4 +208,68 @@ export const authorizedUsers = {
             User: false
         }
     },
+
+    // SC SHADOWS SRL
+    "1117537579349319731": { // Hannah
+        role: "Asistent Director",
+        name: "Director Afacere",
+        servers: {
+            "1469300870188498974": true,
+        },
+        permissions: {
+            CVSubmission: true,
+            Demisie: true,
+            GuildConfig: false,
+            Permission: false,
+            Points: false,
+            PointsHistory: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
+            TimeEntry: true,
+            User: false
+        }
+    },
+
+    "144837650770165769": { // Zenek
+        role: "Asistent Director",
+        name: "Director Afacere",
+        servers: {
+            "1469300870188498974": true,
+        },
+        permissions: {
+            CVSubmission: true,
+            Demisie: true,
+            GuildConfig: false,
+            Permission: false,
+            Points: false,
+            PointsHistory: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
+            TimeEntry: true,
+            User: false
+        }
+    },
+
+    "799958938304905258": { // Garcea
+        role: "Asistent Director",
+        name: "Director Afacere",
+        servers: {
+            "1469300870188498974": true,
+        },
+        permissions: {
+            CVSubmission: true,
+            Demisie: true,
+            GuildConfig: false,
+            Permission: false,
+            Points: false,
+            PointsHistory: false,
+            Presence: true,
+            SalaryAdjustment: true,
+            SalaryConfig: true,
+            TimeEntry: true,
+            User: false
+        }
+    },
 };
