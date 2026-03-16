@@ -10,7 +10,8 @@ export const authorizedUsers = {
             "1460783529641251012": true, // S.C Urban Barber S.R.L
             "1423592908396691458": true, // Resort Royale
             "1350922441580351488": true, // Velentzas S.R.L
-            "1446339763127717888": true
+            "1469300870188498974": true // SC SHADOWS SRL
+            // "1446339763127717888": true
         },
         permissions: {
             CVSubmission: true,
