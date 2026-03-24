@@ -4,7 +4,7 @@ import {defineConfig} from 'vite';
 export default defineConfig({
   envDir: '../',
   server: {
-    allowedHosts: ['pride-peter-lyrics-solid.trycloudflare.com'],
+    allowedHosts: ['delhi-large-enclosed-fence.trycloudflare.com'],
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
