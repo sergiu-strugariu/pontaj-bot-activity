@@ -10,7 +10,9 @@ export const authorizedUsers = {
             "1460783529641251012": true, // S.C Urban Barber S.R.L
             "1423592908396691458": true, // Resort Royale
             "1350922441580351488": true, // Velentzas S.R.L
-            "1469300870188498974": true // SC SHADOWS SRL
+            "1469300870188498974": true, // SC SHADOWS SRL
+			"1396638084711317504": true, // S.C Korean Store Fashion S.R.L
+			"1491528453453906054": true, // S.C. ARTE del Corpo S.R.L
             // "1446339763127717888": true
         },
         permissions: {
@@ -35,7 +37,7 @@ export const authorizedUsers = {
             "1468716505829998646": true, // Midnight Custom SRL
             "1460783529641251012": true, // S.C Urban Barber S.R.L
             "1423592908396691458": true, // Resort Royale
-            "1350922441580351488": true // Velentzas S.R.L
+            "1350922441580351488": true  // Velentzas S.R.L
         },
         permissions: {
             CVSubmission: true,
