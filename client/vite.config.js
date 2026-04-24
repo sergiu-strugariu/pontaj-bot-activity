@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
 	host: true,
     allowedHosts: [
-      'confidence-medicaid-desert-presents.trycloudflare.com'
+      'templates-surround-adjustments-liability.trycloudflare.com'
     ],
 	proxy: {
 	  '/api': {
